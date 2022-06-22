@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script>
+        const scrollProgress = document.getElementById('slider');
+            const height =
+            document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            
+            window.addEventListener('scroll', () => {
+            const scrollTop =
+                document.body.scrollTop || document.documentElement.scrollTop;
+            scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+            });
+    </script>
+</head>
+<body>
+    <section class="banner">
+        <div class="container banner-box">
+            <div class="row navbar">
+                <h1 class="mogo navbar-brand">MoGo</h1>
+                <ul class="text-uppercase list-inline">
+                    <li class="list-inline-item  mx-4 active">about</li>
+                    <li class="list-inline-item  mx-4">service</li>
+                    <li class="list-inline-item  mx-4">work</li>
+                    <li class="list-inline-item  mx-4">blog</li>
+                    <li class="list-inline-item  mx-4">contact</li>
+                    <li class="list-inline-item  mx-4">
+                        <a href="#"><img src="Assets\shopping-cart.png" alt="Shopping Cart"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><img src="Assets\magnifying-glass.png" alt="Magnifying Glass"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="center-content col-12 text-center">
+                    <div class="creative-template">
+                        <h1>Creative Template</h1>
+                    </div>
+                    <div class="welcome text-uppercase my-4">
+                        <h1>Welcome<br>to MoGo</h1>
+                    </div>
+                    <div class="bar"> </div>
+                    <div class="learn-more text-uppercase my-5">
+                        <h1>Learn More</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="sliders row text-uppercase align-items-end">
+                <div class="slider-box intro col-3">
+                    <div class="slider-container">
+                        <div id="slider" class="active"></div>
+                    </div> 
+                    <label for="intro" class="my-3"><span class="number">01</span> intro</label>
+                </div>
+                <div class="slider-box work col-3">
+                    <div class="slider-container">
+                        <div id="slider"></div>
+                    </div>            
+                    <label for="work" class="my-3"><span class="number">02</span> work</label>
+                </div>
+                <div class="slider-box about col-3">
+                    <div class="slider-container">
+                        <div id="slider"></div>
+                    </div>                 
+                    <label for="about" class="my-3"><span class="number">03</span> about</label>
+                </div>
+                <div class="slider-box contacts col-3">
+                    <div class="slider-container">
+                        <div id="slider"></div>
+                    </div>                
+                    <label for="contacts" class="my-3"><span class="number">04</span> contacts</label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work">
+        <div class="about horizontal-margin">
+            <div class="container">
+                <div class="title">
+                    <h3>What we do</h3>
+                    <h2>Story about us</h2>
+                    <div class="bar"></div>                  
+                    <p class="text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+                <div class="row photos">
+                    <div class="col-4 photo-box" id="about1">
+                        <div class="text">
+                            <img src="Assets\About\users.png">
+                            <h3>super team</h3>
+                        </div>       
+                        <!-- <div class="image">
+                            <img class="img-fluid" src="Assets\About\about1.png">
+                        </div>                  -->
+                    </div>
+                    <div class="col-4 photo-box" id="about2">
+                        <div class="text">
+                            <img src="Assets\About\users.png">
+                            <h3>super team</h3>
+                        </div>       
+                        <!-- <div class="image">
+                            <img class="img-fluid" src="Assets\About\about2.png">
+                        </div>              -->
+                    </div>
+                    <div class="col-4 photo-box" id="about3">
+                        <div class="text">
+                            <img src="Assets\About\users.png">
+                            <h3>super team</h3>
+                        </div>      
+                        <!-- <div class="image">
+                            <img class="img-fluid" src="Assets\About\about3.png">
+                        </div>                -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid facts">
+            <div class="container text-uppercase">
+                <div class="div5">
+                    <h1>42</h1>
+                    <small>web design projects</small>
+                </div>
+                <div class="div5">
+                    <h1>123</h1>
+                    <small>happy client</small>
+                </div>
+                <div class="div5">
+                    <h1>15</h1>
+                    <small>award winner</small>
+                </div>
+                <div class="div5">
+                    <h1>99</h1>
+                    <small>cup of coffee</small>
+                </div>
+                <div class="div5">
+                    <h1>24</h1>
+                    <small>members</small>
+                </div>
+            </div>
+        </div>
+        <div class="service horizontal-margin">
+            <div class="title">
+                <h3>We work with</h3>
+                <h2>Amazing services</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="logo">
+                            <img src="Assets\Service\service1.png" alt="Alarm">
+                        </div>
+                        <div class="text">
+                            <h1>Photography</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="logo">
+                            <img src="Assets\Service\service2.png" alt="Line Graph">
+                        </div>
+                        <div class="text">
+                            <h1>Web Design</h1>
+                            <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="logo">
+                            <img src="Assets\Service\service3.png" alt="Computer">
+                        </div>
+                        <div class="text">
+                            <h1>Creativity</h1>
+                            <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar"></div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="logo">
+                            <img src="Assets\Service\service4.png" alt="Book">
+                        </div>
+                        <div class="text">
+                            <h1>SEO</h1>
+                            <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="logo">
+                            <img src="Assets\Service\service5.png" alt="Home">
+                        </div>
+                        <div class="text">
+                            <h1>Css/Html</h1>
+                            <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="logo">
+                            <img src="Assets\Service\service6.png" alt="Image">
+                        </div>
+                        <div class="text">
+                            <h1>digital</h1>
+                            <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature ">
+            <div class="title">
+                <h3>For all devices</h3>
+                <h2>Unique design</h2>
+                <div class="bar"></div>
+            </div>
+            
+            <div>
+                <div class="ipad">
+                    <img src="Assets/Feature/ipad.png" alt="ipad">
+                </div>
+                <div class="iphone">
+                    <img src="Assets/Feature/iphone.png" alt="iphone">
+                </div>
+            </div>
+        </div>
+        <div class="service2 horizontal-margin container">
+            <div class="title">
+                <h3>Service</h3>
+                <h2>What we do</h2>
+                <div class="bar"></div>                
+                <p class="text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div class="content row">
+                <div class="col-6">
+                    <img class="img-fluid" src="Assets\Service2\service.png" alt="Man pasting photos on the wall">
+                </div>
+                <div class="col-6 text">
+                    <div class="content-group active">
+                        <div class="row contentBox topic">
+                            <div class="col-1">
+                                <img src="Assets\Service2\photography.png" alt="photography">
+                            </div>
+                            <div class="col-10">
+                                <h3>photography</h3>
+                            </div>
+                            <div class="col-1 arrow">                     
+                            </div>
+                        </div>
+                        <div class="row contentBox parag">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <div class="row contentBox topic">
+                            <div class="col-1">
+                                <img src="Assets\Service2\photography.png" alt="photography">
+                            </div>
+                            <div class="col-10">
+                                <h3>Creativity</h3>
+                            </div>
+                            <div class="col-1 arrow">                     
+                            </div>
+                        </div>
+                        <div class="row contentBox parag">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <div class="row contentBox topic">
+                            <div class="col-1">
+                                <img src="Assets\Service2\photography.png" alt="photography">
+                            </div>
+                            <div class="col-10">
+                                <h3>photography</h3>
+                            </div>
+                            <div class="col-1 arrow">                     
+                            </div>
+                            <div class="row contentBox parag">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quote container-fluid">
+            <div class="container">
+                <div class="logo">
+                    <img src="Assets\Quote\speech.png" alt="">
+                </div>
+                <div class="text">
+                    <blockquote>
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                    </blockquote>
+                    <div class="author">
+                        <div class="bar"></div>
+                        <p>Jon Doe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="our-team container horizontal-margin">
+            <div class="title">
+                <h3>Who we are</h3>
+                <h2>Meet our team</h2>
+                <div class="bar"></div>                
+                <p class="text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div class="content">
+                <div class="member">
+                    <div class="member-img" id="matthew">
+                        <img class="img-fluid" src="Assets\Our-team\matthew.png" alt="Matthew">
+                    </div>
+                    <div class="member-details">
+                        <h3>Matthew Dix</h3>
+                        <p>Graphic Design</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-img" id="christopher">
+                        <img class="img-fluid" src="Assets\Our-team\christopher.png" alt="Matthew">
+                    </div>
+                    <div class="member-details">
+                        <h3>Christopher Campbell</h3>
+                        <p>Branding/UX design</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-img" id="michael">
+                        <img class="img-fluid" src="Assets\Our-team\michael.png" alt="Matthew">
+                    </div>
+                    <div class="member-details">
+                        <h3>Michael Fertig</h3>
+                        <p>Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
