@@ -182,17 +182,15 @@
 
 .about .photos  {
     display: flex;
-    flex-wrap: nowrap;
-    position: relative;
-    margin-bottom: 5em;
+    justify-content: space-between;
+    margin: 0;
  }
 
 
 .about .photos .photo-box { 
     position: relative;
-    width: 380px;
+    max-width: 32%;
     height: 250px;
-	margin: 10px;
 	transition: 0.5s;
 	text-align: center;    
     background-image: linear-gradient(0deg, #e2cc7b 0%, #db7474 100%);    
@@ -235,10 +233,18 @@
     background: url('Assets/About/about3.png'), linear-gradient(0deg, #e2cc7b 0%, #db7474 100%);    
 }
 
+.about .photos #about2, 
+.about .photos #about1, 
+.about .photos #about3 {
+    background-size: none;
+}
+
 .about .photos #about1:hover, 
 .about .photos #about2:hover, 
 .about .photos #about3:hover {
     background-blend-mode: overlay;
+    margin: -0.5em 0 0 -0.5em;
+    box-shadow: 0.5em 0.5em #95e1d3;
 }
 
 .about .photos .photo-box .text{
@@ -489,32 +495,41 @@
     align-items: center;
 }
 
-/* .our-team .content .member {
-} */
-.our-team .content .member-img  {
-    min-height:470px;
-    min-width: 380px;
+.our-team .content .member {
+    width: 32%;
+}
+.our-team .content .member .member-img  {
+    height:470px;
+    background-size: cover;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.our-team .content .member-img img {
-    height: 470px;
-    width: 380px;   
-    object-fit: cover; 
-    padding-inline: 1em;
+
+.our-team .content .member #matthew {
+    background: url(Assets/Our-team/matthew.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%); 
+    background-size: cover;
+    background-position: -6em;   
+    transition: 0.5s;
+}
+.our-team .content .member #christopher {
+    background: url(Assets/Our-team/christopher.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);
+    background-size: cover;
+    background-position: center;    
+}
+.our-team .content .member #michael {
+    background: url(Assets/Our-team/michael.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);
+    background-size: cover;
+    background-position: center;   
 }
 
-.our-team .content #matthew img{
-    object-position: left;
-}
-
-.our-team .content .member .member-img #matthew {
-    background: url(Assets/Our-team/matthew.png);    
-}
-.our-team .content .member .member-img #christopher {
-    background: url(Assets/Our-team/christopher.png);    
-}
-.our-team .content .member .member-img #michael {
-    background: url('Assets/Our-team/michael.png'), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);    
+.our-team .content .member .member-img:hover {
+    background-blend-mode: overlay;
+    margin: -1em 0 0 -0.5em;
+    box-shadow: 0.5em 0.5em #95e1d3;
 }
 
 .our-team .content .member .member-details {
@@ -524,12 +539,15 @@
     margin: 2em;
 }
 
+
+
 .our-team .content .member .member-details h3{
     font-size: 14px;
     color: #333333;
     font-weight: 400;
     font-family: "Montserrat";
     text-align: center;
+    text-transform: uppercase!important;
 }
 
 .our-team .content .member .member-details p{
@@ -540,5 +558,35 @@
     font-style: italic;
     font-family: "Roboto";
     text-align: center;
+}
+
+.our-team .content .share {
+    width: 224px;
+    height: 56px;
+    background-color: #fce38a;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.our-team .content .share .socials {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.our-team .content .share .facebook img {
+    filter: brightness(0) saturate(100%) invert(75%) sepia(93%) saturate(2795%) hue-rotate(311deg) brightness(105%) contrast(91%);    
+}
+
+.our-team .content .share .socials:hover {
+    background: #f38181;
+}
+
+.our-team .content .share .socials:hover img{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(452%) hue-rotate(68deg) brightness(114%) contrast(100%);    
 }
 
