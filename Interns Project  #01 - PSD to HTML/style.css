@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+body {
+    background-color: #f8f8f8;
+}
 
 .banner {
     background-image: url(Assets/banner.png), linear-gradient(0deg, #fbe389 0%, #f48b82 100%);   
@@ -831,28 +833,35 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .blog .contentBox {
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 100%;
+    max-width: 31.5%;
 }
-.blog .contentBox .photo {
-    width: 90%;
+.blog .contentBox .photo {    
     height: 240px;
     background-color: #95e1d3;
 }
 
 .blog .contentBox#blog1 .photo{
     background: url(Assets/Blog/blog1.png);
+    background-size: 32em;
+    background-position: -9em -6em;
 }
+
 .blog .contentBox#blog2 .photo{
     background: url(Assets/Blog/blog2.png);
+    background-size: cover;
+    background-position: center;
 }
 .blog .contentBox#blog3 .photo{
     background: url(Assets/Blog/blog3.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .blog .contentBox .date{
@@ -863,6 +872,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: -5em 0em 1em -0.5em;
 } 
 
 .blog .contentBox .date h2{
@@ -889,7 +899,7 @@
 .blog .contentBox .caption h2{
     font-size: 14px;
     color: #333333;
-    font-weight: 400;
+    font-weight: 500;
     font-family: "Montserrat";
     text-transform: uppercase!important;
 }
@@ -902,6 +912,11 @@
     font-family: "Roboto";
 }
 
+.blog .contentBox .bar {
+width: 100%;
+height: 1px;
+background-color: #e5e5e5;
+}
 .blog .contentBox .interactions{
     display: flex;
     flex-direction: row;
@@ -917,6 +932,219 @@
     margin-right: 1em;  
 }
 
+.map {
+    min-height: 200px;
+    background: url(Assets/Map/map.png), #d9d9d9;
+    background-blend-mode: screen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map h2{
+    font-size: 24px;
+    color: #f38181;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    text-transform: uppercase!important;
+}
+
+.map .bar {
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+}
+
+.footer {    
+    margin-top: 6em;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .col {
+    width: 31%;
+}
+.footer .first {
+    width: 40%;
+}
+
+.footer h1 {
+    font-size: 46px;
+    color: #cccccc;
+    font-weight: 700;
+    font-family: "Montserrat";  
+    margin-bottom: 1em;  
+}
+
+.footer .parag {    
+    font-size: 12px;
+    line-height: 18px;
+    color: #999999;
+    font-weight: 400;
+    font-family: "Roboto";    
+}
+.footer .parag.near {
+    margin-bottom: 0;
+}
+
+.footer .followers {
+    font-size: 18px;
+    color: #333333;
+    font-weight: 300;
+    font-family: "Montserrat";
+}
+
+.footer .followers #bold{
+    font-weight: 700;
+}
+
+.footer .col .bar{
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin-bottom: 1em;
+}
+
+.footer .col .socials {
+    font-size: 15px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.footer .col .socials p{
+    margin: 0;
+}
+
+.footer .col .socials img{
+    margin-inline: 0.5em;
+}
+
+.footer .col form {
+    margin-top: 2em;
+    display: flex;
+}
+.footer .col form input {
+    width: 230px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;    
+}
+.footer .col form input::placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    color: #cccccc;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto";
+}
+
+.footer .col form button {
+    width: 150px;
+    height: 40px;
+    background-color: #95e1d3;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    text-transform: uppercase!important;
+    border: none;
+}
+
+.footer .col h2 {
+    font-size: 14px;
+    color: #333333;
+    font-weight: 500;
+    font-family: "Montserrat";
+    text-transform: uppercase!important;   
+    margin-bottom: 4em; 
+}
+
+.footer .second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 
 
+.footer .second .blogs {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .second .blogs .text {
+    margin-left: 1em;  
+}
+
+
+.footer .second .blogs .text h3 {
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+    font-weight: 450;
+    font-family: "Montserrat";
+    text-transform: uppercase!important;
+    width: 204px;
+}
+
+.footer .second .blogs .text p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto";  
+}
+
+.footer .third .instagram {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer .third .instagram img{
+    margin: 1px;
+}
+
+.footer .third small {
+    font-size: 13px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto";
+    cursor: pointer;
+}
+
+.copyright {
+    border-top: 1px solid #e5e5e5;
+    height: 4em;
+    margin-top: 5em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;    
+}
+
+.copyright p {
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+    margin: 0;
+}
+
+.copyright p span{
+    color: #f38181;
+}
