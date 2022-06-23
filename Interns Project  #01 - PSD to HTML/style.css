@@ -6,7 +6,7 @@
     height: 100vh; 
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: overlay;
+    background-blend-mode: soft-light;
     color: #fff;
 }
 
@@ -194,7 +194,7 @@
 	transition: 0.5s;
 	text-align: center;    
     background-image: linear-gradient(0deg, #e2cc7b 0%, #db7474 100%);    
-    background-blend-mode: overlay;
+    background-blend-mode: soft-light;
 }
 
 .about .photos .photo-box .text, 
@@ -242,7 +242,7 @@
 .about .photos #about1:hover, 
 .about .photos #about2:hover, 
 .about .photos #about3:hover {
-    background-blend-mode: overlay;
+    background-blend-mode: soft-light;
     margin: -0.5em 0 0 -0.5em;
     box-shadow: 0.5em 0.5em #95e1d3;
 }
@@ -449,7 +449,7 @@
 .quote .container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .quote .logo {
     width: 150px;
@@ -527,9 +527,12 @@
 }
 
 .our-team .content .member .member-img:hover {
-    background-blend-mode: overlay;
+    background-blend-mode: soft-light;
     margin: -1em 0 0 -0.5em;
     box-shadow: 0.5em 0.5em #95e1d3;
+}
+.our-team .content .member .member-img:hover .share{
+    opacity: 1;
 }
 
 .our-team .content .member .member-details {
@@ -568,6 +571,8 @@
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
+    opacity: 0;
 }
 .our-team .content .share .socials {
     width: 100%;
@@ -576,7 +581,6 @@
     justify-content: center;
     align-items: center;
 }
-
 
 .our-team .content .share .facebook img {
     filter: brightness(0) saturate(100%) invert(75%) sepia(93%) saturate(2795%) hue-rotate(311deg) brightness(105%) contrast(91%);    
@@ -589,4 +593,330 @@
 .our-team .content .share .socials:hover img{
     filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(452%) hue-rotate(68deg) brightness(114%) contrast(100%);    
 }
+
+.bg-logos {
+    height: 250px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.work .gallery {
+    height: 780px;
+    padding: 0;
+    display: flex;    
+}
+
+.work .gallery .columns {
+    width: 25%;
+    padding: 0;
+    height: 100%;
+}
+.work .gallery .columns .rectangle {
+    height: 100%
+}
+.work .gallery .columns .square {
+    height: 50%;
+    padding: 0;    
+}
+
+
+
+.work .gallery .columns #work1{
+    background: url(Assets/Work/work1.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.work .gallery .columns #work2{
+    background: url(Assets/Work/work2.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);
+    background-size: cover;
+    background-position: bottom;    
+}
+
+.work .gallery .columns #work3{
+    background: url(Assets/Work/work3.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);
+    background-size: 40em;
+    background-position: right;
+}
+
+.work .gallery .columns #work4{
+    background: url(Assets/Work/work4.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);
+    background-size: cover;
+    background-position: center;
+}
+.work .gallery .columns #work5{
+    background: url(Assets/Work/work5.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);
+    background-position: center;
+
+}.work .gallery .columns #work6{
+    background: url(Assets/Work/work6.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);
+}
+.work .gallery .columns #work7{
+    background: url(Assets/Work/work7.png), linear-gradient(0deg, #f1e390 0%, #ea8b89 100%);    
+}
+
+.work .gallery .columns .square:hover,
+.work .gallery .columns .rectangle:hover {
+    background-blend-mode: soft-light;
+}
+.work .gallery .columns .square,
+.work .gallery .columns .rectangle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work .gallery .columns .text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+}
+
+.work .gallery .columns .text h3 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+    text-transform: uppercase!important;
+    margin-top: 1em;
+}
+.work .gallery .columns .text p {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+.work .gallery .columns .square:hover .text,
+.work .gallery .columns .rectangle:hover .text {
+    opacity: 1;
+}
+
+.testimonials.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.testimonials .logo {
+    width: 150px;
+    height: 150px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(Assets/Testimonials/man-bonnet.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.testimonials blockquote {
+    width: 770px;
+    font-size: 24px;
+    line-height: 36px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto";
+}
+
+.testimonials p {
+    font-size: 24px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Kaushan Script";
+    margin: 0 .5em;
+}
+.testimonials .text .author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+.testimonials .text .author .bar {  
+    min-width: 60px;
+    height: 3px;
+    background:  #f38181;    
+}
+
+.what-people-say {
+    height: 830px;
+    background: url(Assets/What-people-say/background.png),#d9d9d9;
+    background-blend-mode: screen;
+    background-size: cover;
+    padding-top: 6em;
+}
+
+.what-people-say .content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.what-people-say .content .contentBox {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+.what-people-say .content .contentBox .photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+    background-color: #fce38a;
+}
+.what-people-say .content .contentBox .photo#matthew{
+    background: url(Assets/What-people-say/matthew.png);
+    background-size: 16em;
+    background-position: -4.5em 0px;
+}
+.what-people-say .content .contentBox .photo#nick{
+    background: url(Assets/What-people-say/nick.png);
+    background-size: 15em;
+    background-position: -4.6em 15em;
+}
+.what-people-say .content .contentBox .photo#jaelynn{
+    background: url(Assets/What-people-say/jaelynn.png);
+    background-size: 15em;
+    background-position: -4.5em -0.5em;
+}
+.what-people-say .content .contentBox .photo#mike{
+    background: url(Assets/What-people-say/mike.png);
+    background-size: 29.6em;
+    background-position: 23.5em -2.6em;
+}
+.what-people-say .content .contentBox .details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+}
+.what-people-say .content .contentBox .details h3{
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-transform: uppercase!important;
+}
+
+.what-people-say .content .contentBox .details h4{
+    font-size: 15px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto";
+}
+.what-people-say .content .contentBox .details .bar{
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+}
+
+.what-people-say .content .contentBox .details p{
+    width: 389px;
+    height: 129px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.blog .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.blog .contentBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+}
+.blog .contentBox .photo {
+    width: 90%;
+    height: 240px;
+    background-color: #95e1d3;
+}
+
+.blog .contentBox#blog1 .photo{
+    background: url(Assets/Blog/blog1.png);
+}
+.blog .contentBox#blog2 .photo{
+    background: url(Assets/Blog/blog2.png);
+}
+.blog .contentBox#blog3 .photo{
+    background: url(Assets/Blog/blog3.png);
+}
+
+.blog .contentBox .date{
+    width: 60px;
+    height: 70px;
+    background-color: #95e1d3;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.blog .contentBox .date h2{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    padding: 0;
+}
+.blog .contentBox .date h3{
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: "Roboto";
+    text-align: center;
+    font-style: italic;
+    padding:0;
+    margin-top:-1em;
+}
+
+.blog .contentBox .caption{
+    display: flex;
+    flex-direction: column;
+}
+.blog .contentBox .caption h2{
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-transform: uppercase!important;
+}
+.blog .contentBox .caption p{
+    width: 380px;    
+    font-size: 15px;
+    line-height: 24px;
+    color: #999;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.blog .contentBox .interactions{
+    display: flex;
+    flex-direction: row;
+}
+
+.blog .contentBox .interactions small{
+    font-size: 15px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto";  
+    margin-right: 1em;  
+}
+
+
+
 

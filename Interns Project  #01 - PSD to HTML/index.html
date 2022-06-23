@@ -19,10 +19,39 @@
                 document.body.scrollTop || document.documentElement.scrollTop;
             scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
             });
+
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+            var winScroll = document.documentElement.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("slider").style.width = scrolled + "%";
+            }
+
+            // function myFunction() {
+            //     const winScroll = document.getElementById("banner").scrollTop;
+            //     const height = document.getElementById("banner").scrollHeight - document.documentElement.clientHeight;
+            //     const scrolled = (winScroll / height) * 100;
+            //     document.getElementById("slider-intro").style.width = scrolled + "%";
+            // }
+
+            // document.getElementById("banner").onscroll = function() {myFunction()};
+
+            let parent = document.querySelector('.sliders').parentElement;
+
+            while (parent) {
+                const hasOverflow = getComputedStyle(parent).overflow;
+                if (hasOverflow !== 'visible') {
+                    console.log(hasOverflow, parent);
+                }
+                parent = parent.parentElement;
+            }
     </script>
 </head>
 <body>
-    <section class="banner">
+    <section class="banner" id="banner">
         <div class="container banner-box">
             <div class="row navbar">
                 <h1 class="mogo navbar-brand">MoGo</h1>
@@ -63,26 +92,26 @@
                 </div>
                 <div class="slider-box work col-3">
                     <div class="slider-container">
-                        <div id="slider"></div>
+                        <div id="slider-work"></div>
                     </div>            
                     <label for="work" class="my-3"><span class="number">02</span> work</label>
                 </div>
                 <div class="slider-box about col-3">
                     <div class="slider-container">
-                        <div id="slider"></div>
+                        <div id="slider-about"></div>
                     </div>                 
                     <label for="about" class="my-3"><span class="number">03</span> about</label>
                 </div>
                 <div class="slider-box contacts col-3">
                     <div class="slider-container">
-                        <div id="slider"></div>
+                        <div id="slider-contacts"></div>
                     </div>                
                     <label for="contacts" class="my-3"><span class="number">04</span> contacts</label>
                 </div>
             </div>
         </div>
     </section>
-    <section class="work">
+    <section class="work-class">
         <div class="about horizontal-margin">
             <div class="container">
                 <div class="title">
@@ -283,6 +312,7 @@
         </div>
         <div class="quote container-fluid">
             <div class="container">
+                <img src="Assets\Quote\arrow-left.png" alt="arrow left">
                 <div class="logo">
                     <img src="Assets\Quote\speech.png" alt="">
                 </div>
@@ -295,6 +325,7 @@
                         <p>Jon Doe</p>
                     </div>
                 </div>
+                <img src="Assets\Quote\arrow-right.png" alt="arrow right">
             </div>
         </div>
         <div class="our-team container horizontal-margin">
@@ -360,8 +391,8 @@
                         <div class="share">
                             <div class="share">
                                 <div class="socials facebook">
-                                    <img src="Assets\Our-team\facebook.png" alt="facebook">
-                                </div>
+                                        <img src="Assets\Our-team\facebook.png" alt="facebook">
+                                </div>                                 
                                 <div class="socials twitter">
                                     <img src="Assets\Our-team\twitter.png" alt="twitter">
                                 </div>
@@ -377,6 +408,224 @@
                     <div class="member-details">
                         <h3>Michael Fertig</h3>
                         <p>Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-logos">
+            <div class="logos">
+                <img src="Assets\Logos\logos.png" alt="Logos" usemap="#logos-map">
+
+                <map name="logos-map">
+                    <area target="" alt="Hipoter" title="Hipoter" href="#" coords="54,62,57" shape="circle">
+                    <area target="" alt="ABCD" title="ABCD" href="#" coords="227,14,315,109" shape="rect">
+                    <area target="" alt="Design Quality" title="Design Quality" href="#" coords="475,62,63" shape="circle">
+                    <area target="" alt="Hipster Barbershop" title="Hipster Barbershop" href="#" coords="635,10,760,113" shape="rect">
+                    <area target="" alt="Hipster Barbershop" title="Hipster Barbershop" href="#" coords="905,63,63" shape="circle">
+                    <area target="" alt="Studio Designer" title="Studio Designer" href="#" coords="1124,59,63" shape="circle">
+                </map>
+            </div>
+        </div>
+        <div class="work horizontal-margin">
+            <div class="title">
+                <h3>What we do</h3>
+                <h2>Some of our work</h2>
+                <div class="bar"></div>                
+                <p class="text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div class="container-fluid gallery">
+                <div class="columns">
+                    <div class="square up" id="work1">
+                        <div class="text">
+                            <img src="Assets\Work\picture.png">
+                            <h3>creatively designed</h3>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>  
+                    </div>
+                    <div class="square down" id="work3">
+                        <div class="text">
+                            <img src="Assets\Work\picture.png">
+                            <h3>creatively designed</h3>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>  
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="square up" id="work2">
+                        <div class="text">
+                            <img src="Assets\Work\picture.png">
+                            <h3>creatively designed</h3>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>  
+                    </div>
+                    <div class="square down" id="work4">
+                        <div class="text">
+                            <img src="Assets\Work\picture.png">
+                            <h3>creatively designed</h3>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>  
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="rectangle" id="work5">
+                        <div class="text">
+                            <img src="Assets\Work\picture.png">
+                            <h3>creatively designed</h3>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>  
+                    </div>                    
+                </div>
+                <div class="columns">
+                    <div class="square up" id="work6">
+                        <div class="text">
+                            <img src="Assets\Work\picture.png">
+                            <h3>creatively designed</h3>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>  
+                    </div>
+                    <div class="square down" id="work7">
+                        <div class="text">
+                            <img src="Assets\Work\picture.png">
+                            <h3>creatively designed</h3>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials container">
+            <img src="Assets\Quote\arrow-left.png" alt="arrow left">
+            <div class="logo">
+            </div>
+            <div class="text">
+                <blockquote>
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                </blockquote>
+                <div class="author">
+                    <div class="bar"></div>
+                    <p>Joshua Earle</p>
+                </div>
+            </div>
+            <img src="Assets\Quote\arrow-right.png" alt="arrow right">
+        </div>
+        <div class="what-people-say container-fluid horizontal-margin">
+            <div class="container">
+                <div class="title">
+                    <h3>What we do</h3>
+                    <h2>Some of our work</h2>
+                    <div class="bar"></div>   
+                </div>
+                <div class="content">
+                    <div class="contentBox">
+                        <div class="photo" id="matthew"></div>
+                        <div class="details">
+                            <h3>Matthew Dix</h3>
+                            <h4>Graphic Design</h4>
+                            <div class="bar"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                        </div>
+                    </div>
+                    <div class="contentBox">
+                        <div class="photo" id="nick"></div>
+                        <div class="details">
+                            <h3>Nick Karvounis</h3>
+                            <h4>Graphic Design</h4>
+                            <div class="bar"></div>
+                            <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        </div>
+                    </div>
+                    <div class="contentBox">
+                        <div class="photo" id="jaelynn"></div>
+                        <div class="details">
+                            <h3>Jaelynn Castillo</h3>
+                            <h4>Graphic Design</h4>
+                            <div class="bar"></div>
+                            <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        </div>
+                    </div>
+                    <div class="contentBox">
+                        <div class="photo" id="mike"></div>
+                        <div class="details">
+                            <h3>Mike Petrucci</h3>
+                            <h4>Graphic Design</h4>
+                            <div class="bar"></div>
+                            <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog container">
+            <div class="title">
+                <h3>Our stories</h3>
+                <h2>Latest blog</h2>
+                <div class="bar"></div>   
+            </div>
+            <div class="content">
+                <div class="contentBox" id="blog1">
+                    <div class="photo"></div>
+                    <div class="date">
+                        <h2>15</h2>
+                        <h3>Jan</h3>
+                    </div>
+                    <div class="caption">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="interactions">                        
+                        <div class="views">
+                            <img src="Assets\Blog\views.png" alt="views">
+                            <small>542</small>
+                        </div>
+                        <div class="comments">
+                            <img src="Assets\Blog\comments.png" alt="comments">
+                            <small>17</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBox" id="blog2">
+                    <div class="photo"></div>
+                    <div class="date">
+                        <h2>15</h2>
+                        <h3>Jan</h3>
+                    </div>
+                    <div class="caption">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="interactions">                        
+                        <div class="views">
+                            <img src="Assets\Blog\views.png" alt="views">
+                            <small>542</small>
+                        </div>
+                        <div class="comments">                            
+                            <img src="Assets\Blog\comments.png" alt="comments">                            
+                            <small>17</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBox" id="blog3">
+                    <div class="photo"></div>
+                    <div class="date">
+                        <h2>15</h2>
+                        <h3>Jan</h3>
+                    </div>
+                    <div class="caption">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="interactions">                        
+                        <div class="views">
+                            <img src="Assets\Blog\views.png" alt="views">
+                            <small>542</small>
+                        </div>
+                        <div class="comments">
+                            <img src="Assets\Blog\comments.png" alt="comments">
+                            <small>17</small>
+                        </div>
                     </div>
                 </div>
             </div>
